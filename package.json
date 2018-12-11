@@ -1,0 +1,20 @@
+{
+  "name": "mv-netlify",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.5.0",
+    "luxon": "^1.0.0",
+    "markdown-it": "^8.4.1",
+    "markdown-it-anchor": "^4.0.0"
+  },
+  "dependencies": {
+    "clean-css": "^4.1.11",
+    "html-minifier": "^3.5.19",
+    "uglify-js": "^3.4.5"
+  }
+}

@@ -42,7 +42,7 @@ subheader: The best school
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
-
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body data-spy="scroll" data-target=".navbar-collapse">
 
@@ -484,6 +484,19 @@ subheader: The best school
 
 		<!-- jQuery Settings -->
 		<script src="js/settings.js"></script>
+
+		<!-- Netlify Identity -->
+		<script>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on("init", user => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+					document.location.href = "/admin/";
+					});
+				}
+				});
+			}
+		</script>
 
 
 	</body>

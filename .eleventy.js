@@ -52,22 +52,22 @@ module.exports = function(eleventyConfig) {
 //     });
 //   });
 
-//   /* Markdown Plugins */
-//   let markdownIt = require("markdown-it");
-//   let options = {
-//     html: true,
-//     breaks: true,
-//     linkify: true
-//   };
-//   let opts = {
-//     permalink: true,
-//     permalinkClass: "direct-link",
-//     permalinkSymbol: "#"
-//   };
+  /* Markdown Plugins */
+  let markdownIt = require("markdown-it");
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  let opts = {
+    permalink: true,
+    permalinkClass: "direct-link",
+    permalinkSymbol: "#"
+  };
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("layouts");
+  // eleventyConfig.addPassthroughCopy("layouts");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("images");
@@ -90,7 +90,8 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     passthroughFileCopy: true,
     dir: {
-      input: "pages",            
+      input: "pages",   
+      includes: "_includes",         
       output: "_site"
     }
   };

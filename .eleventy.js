@@ -67,6 +67,7 @@ module.exports = function(eleventyConfig) {
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("layouts");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("images");
